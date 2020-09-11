@@ -1,0 +1,9 @@
+.todo-list {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-around;
+}
+
+.todo {
+  width: 15rem;
+}

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import './App.css';
 import Todo from './components/Todo';
 import Form from './components/Form';
-
+import Box from '@material-ui/core/Box';
 
 function App() {
 
@@ -25,22 +26,20 @@ function App() {
   }
 
   return (
-    <div className="general-container">
-      <div className="main-div">
-        <h1>ToDo List</h1>
-        <Form addTodo={addTodo} />
-        {todos.map((todo, index) => (
-          <Todo
-            key={index}
-            index={index}
-            todo={todo}
-            crossTodo={crossTodo}
-            deleteTodo={deleteTodo}
-          />
-        ))
-        }
-      </div>
-    </div>
+    <Box className="main-container">
+      <h1 color="primary">ToDo List</h1>
+      <Form addTodo={addTodo} />
+      {todos.map((todo, index) => (
+        <Todo
+          key={index}
+          index={index}
+          todo={todo}
+          crossTodo={crossTodo}
+          deleteTodo={deleteTodo}
+        />
+      ))
+      }
+    </Box>
   );
 }
 
